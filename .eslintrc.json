@@ -1,0 +1,74 @@
+{
+    "env": {
+      "browser": true,
+      "es2021": true,
+      "jest": true
+    },
+    "ignorePatterns": ["node_modules", "dist", "build"],
+    "extends": [
+      "plugin:react/recommended", 
+      "airbnb",
+      "plugin:import/errors",
+      "plugin:import/warnings",
+      "prettier"
+    ],
+    "parser": "@babel/eslint-parser",
+    "parserOptions": {
+      "ecmaFeatures": {
+        "jsx": true
+      },
+      "ecmaVersion": "latest",
+      "sourceType": "module",
+      "requireConfigFile": false,
+      "babelOptions": {
+        "parserOpts":{
+          "plugins": ["jsx"]
+        }
+      }
+    },
+    "plugins": ["react", "jsx-a11y", "import", "react-hooks", "prettier"],
+    "rules": {
+      "indent": ["error", 2],
+      "arrow-body-style": "off",
+      "prefer-arrow-callback": "off",
+      "jsx-a11y/no-autofocus": "off",
+      "jsx-a11y/no-static-element-interactions": "off",
+      "prettier/prettier": ["error", {"semi": false}],
+      "react/jsx-props-no-spreading": "off",
+      "linebreak-style": [0, "unix"],
+      "quotes": ["error", "single"],
+      "semi": ["error", "never"],
+      "react/react-in-jsx-scope": "off",
+      "react/destructuring-assignment": ["error", "always", { "ignoreClassFields": true}],
+      "jsx-a11y/label-has-associated-control": "off",
+      "react/prop-types": 0,
+      "import/no-unresolved": [2, { "caseSensitive": false }],
+      "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+      "react/forbid-prop-types": "off",
+      "no-plusplus":"off",
+      "class-methods-use-this": "off",
+      "react/state-in-constructor": "off",
+      "import/order": [
+        2,
+        {
+          "groups": [
+            "builtin",
+            "external",
+            "internal",
+            "parent",
+            "sibling",
+            "index"
+          ],
+          "newlines-between": "always"
+        }
+      ]
+    },
+    "settings": {
+      "import/resolver": {
+        "node": {
+          "extensions": [".js", ".jsx", ".ts", ".tsx"],
+          "moduleDirectory": ["node_modules", "src/"]
+        }
+      }
+    }
+  }

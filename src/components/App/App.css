@@ -1,0 +1,36 @@
+html {
+  background-color: #e5e5e5;
+}
+
+.main-container {
+  background-color: #ffffff;
+  margin: 0 auto;
+  padding: 13px 36px;
+  height: auto;
+  max-width: 1010px;
+}
+
+@media (max-width: 426px) {
+  .main-container {
+    padding: 0 16px;
+  }
+}
+
+.main-container .ant-layout {
+  background-color: #ffffff;
+  min-height: 100vh;
+}
+
+.spin-1 {
+  background: rgba(0, 0, 0, 0.05);
+  margin: 20px 0;
+  margin-bottom: 20px;
+  padding: 30px 50px;
+  text-align: center;
+  border-radius: 4px;
+}
+.spin-2 {
+  margin: 20px 0;
+  padding: 30px 50px;
+  text-align: center;
+}
